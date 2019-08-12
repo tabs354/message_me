@@ -7,7 +7,7 @@ require 'faker'
               password: "password")
 end
 
-15.times do
+8.times do
   Message.create(body: Faker::JapaneseMedia::OnePiece.quote,
                  user_id: Faker::Number.within(range: 1..5))
 end
