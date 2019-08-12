@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, except:[:new]
 
-  resources :messages
-
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+
+  #resources :messages
+  post 'message', to: 'messages#create'
 end
