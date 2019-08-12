@@ -1,8 +1,8 @@
 <div class="ui violet large inverted menu">
   <div class="ui container">
-    <a class="item">
+    <%= link_to root_path, class: "item" do %>
       <i class="universal access icon"></i> Chatroom
-    </a>
+    <% end %>
     <a class="item">
       <i class="envelope icon"></i> Messages
     </a>
@@ -10,8 +10,12 @@
       <div class="ui dropdown item">
         <i class="user circle icon"></i> Account <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item"><i class="sign-in icon"></i> Log In</a>
-          <a class="item"><i class="plus icon"></i> Sign Up </a>
+          <%= link_to login_path, class: "item" do %>
+            <i class="sign-in icon"></i> Log In
+          <% end %>
+          <%= link_to login_path, class: "item" do %>
+            <i class="user plus icon"></i> Sign Up
+          <% end %>
           <a class="item"><i class="sign-out icon"></i> Log Out</a>
         </div>
       </div>
